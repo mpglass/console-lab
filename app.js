@@ -41,10 +41,28 @@ console.log ('Interests:');
 
 for (let i=0; i< interests.length; i++) {
     console.log ('*' + interests[i])
+ 
 }
 console.log ('');
+console.log ('My Previous Experience')
 
+function displayPosition (title, where, whatDo) {
+    console.log('*' + title + ' at ' + where + ' - ' + whatDo)
+    };
 
-function displayPosition () {
+displayPosition (jobBook['title'],jobBook['where'],jobBook['whatDo']);
+displayPosition (jobMedia['title'],jobMedia['where'],jobMedia['whatDo']);
+displayPosition (jobComic['title'], jobComic['where'], jobComic['whatDo']);
+displayPosition (jobAuto['title'], jobAuto['where'], jobAuto['whatDo']);
+displayPosition (jobTRC['title'], jobTRC['where'], jobTRC['whatDo']);
 
-} 
+for (let i=0; i < skills.length; i++ ) {
+    
+    if (skills [1] === true) {
+        console.log ('* BAM:'[i] )
+    }
+    else { console.log ('*'[i])
+
+    };
+
+}
