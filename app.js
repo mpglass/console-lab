@@ -29,8 +29,6 @@ let jobTRC = {
     whatDo: 'Teacher of crafts and maker of messes' 
 };
 
-let skills = ['Teaching', 'Quilting', 'Shen Lung Kung Fu', 'High Animal Kin','Ran over 200,000 console logs in less than an hour', 'Painting','Pinterest', 'Creativity','Kitty wrangling', 'Walt level Disney Fan', 'Maker of rainbows-in my hair', 'Leads a Pop army'];
-
 const up = name.toUpperCase()
 
 console.log ('Name: ' + (up));
@@ -56,13 +54,32 @@ displayPosition (jobComic['title'], jobComic['where'], jobComic['whatDo']);
 displayPosition (jobAuto['title'], jobAuto['where'], jobAuto['whatDo']);
 displayPosition (jobTRC['title'], jobTRC['where'], jobTRC['whatDo']);
 
-for (let i=0; i < skills.length; i++ ) {
-    
-    if (skills [1] === true) {
-        console.log ('* BAM:'[i] )
+console.log ('');
+console.log ('My Skills:');
+
+let skills = [
+{skill: 'Teaching', coolness: true}, 
+{skill: 'Quilting'},
+{skill: 'Shen Lung Kung Fu', coolness: true},
+{skill: 'High Animal Kin'},
+{skill: 'Ran over 200,000 console logs in less than an hour', coolness: true},
+{skill: 'Painting'},
+{skill: 'Pinterest'},
+{skill: 'Creativity'},
+{skill: 'Kitty wrangling', coolness: true},
+{skill: 'Walt level Disney Fan'},
+{skill: 'Maker of rainbows-in my hair', coolness: true},
+{skill: 'Leads a funkoPop army'},
+{skill: 'Finally beat this lab!', coolness: true}
+];
+
+function displaySkill (skills) {
+    for (let i=0; i < skills.length; i++ ) {
+        if (skills[i]['coolness'] === true) {
+            console.log ('* BAM: ' + skills[i]['skill'])
+        }
+        else { console.log ('* ' + skills[i]['skill'])
+        }
     }
-    else { console.log ('*'[i])
-
-    };
-
 }
+displaySkill(skills);
